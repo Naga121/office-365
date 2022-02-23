@@ -50,7 +50,6 @@ export class AppComponent implements OnInit, OnDestroy {
         .subscribe({
           next: (res) => {
             console.log(res);
-            console.log("res",res);
 
             this.setLoginDisplay();
           },
