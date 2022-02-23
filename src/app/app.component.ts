@@ -13,7 +13,6 @@ import {
   RedirectRequest,
 } from '@azure/msal-browser';
 import { filter, Subject, take, takeUntil } from 'rxjs';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -51,6 +50,8 @@ export class AppComponent implements OnInit, OnDestroy {
         .subscribe({
           next: (res) => {
             console.log(res);
+            console.log("res",res);
+
             this.setLoginDisplay();
           },
           error: (err) => console.log(err),
